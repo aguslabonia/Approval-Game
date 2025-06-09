@@ -1353,7 +1353,8 @@ let indicePregunta = 0;
 let puntaje = 0;
 let respuestasUsuario = [];
 let nombreUsuario = "";
-
+let timerInterval = null;
+let tiempoRestante = 15;
 
 function cargarTemas() {
   const temaSelect = document.getElementById('tema');
@@ -1404,6 +1405,7 @@ document.getElementById('reiniciar').onclick = () => {
   document.getElementById('resultado').style.display = 'none';
   document.getElementById('juego').style.display = 'none';
   actualizarBarraProgreso(0);
+  clearInterval(timerInterval);
 };
 
 function mostrarPregunta() {
@@ -1418,6 +1420,7 @@ function mostrarPregunta() {
     preguntaArea.appendChild(btn);
   });
   document.getElementById('siguiente').style.display = 'none';
+  iniciarTimer(); // <-- Agrega esta línea
 }
 function normalizarTexto(texto) {
   return texto
@@ -1429,7 +1432,9 @@ function normalizarTexto(texto) {
     .trim()
     .toLowerCase();
 }
+
 function seleccionarOpcion(btn, opcion, respuesta, extra) {
+  clearInterval(timerInterval); // <-- Agrega esto al principio
   const opciones = document.querySelectorAll('.opcion');
   opciones.forEach(b => {
     b.disabled = true;
@@ -1471,6 +1476,7 @@ document.getElementById('puntaje').textContent = `${nombreUsuario}, tu puntaje: 
   mostrarResumen();
   guardarPuntaje(nombreUsuario, puntaje);
   mostrarRanking();
+  clearInterval(timerInterval);
 }
 
 function mostrarResumen() {
@@ -1534,6 +1540,61 @@ function actualizarBarraProgreso() {
     }
   }
   barra.style.width = porcentaje + '%';
+}
+function iniciarTimer() {
+  clearInterval(timerInterval);
+  tiempoRestante = 15;
+  actualizarTimerVisual();
+
+  timerInterval = setInterval(() => {
+    tiempoRestante--;
+    actualizarTimerVisual();
+
+    if (tiempoRestante <= 0) {
+      clearInterval(timerInterval);
+      marcarTimeout();
+    }
+  }, 1000);
+}
+
+function actualizarTimerVisual() {
+  const timerNumero = document.getElementById('timer-numero');
+  const barra = document.getElementById('timer-barra-progreso');
+  timerNumero.textContent = tiempoRestante;
+  barra.style.width = (tiempoRestante / 15 * 100) + '%';
+  if (tiempoRestante <= 3) {
+    timerNumero.classList.add('rojo');
+  } else {
+    timerNumero.classList.remove('rojo');
+  }
+}
+
+function marcarTimeout() {
+  const preguntaObj = preguntasTema[indicePregunta];
+  const preguntaArea = document.getElementById('pregunta-area');
+  const opciones = document.querySelectorAll('.opcion');
+  opciones.forEach(b => {
+    b.disabled = true;
+    if (normalizarTexto(b.textContent) === normalizarTexto(preguntaObj.respuesta)) {
+      b.classList.add('correcta');
+    } else {
+      b.classList.add('incorrecta');
+    }
+  });
+  // Guarda la respuesta como vacía o "Sin responder"
+  respuestasUsuario.push({
+    pregunta: preguntaObj.pregunta,
+    correcta: preguntaObj.respuesta,
+    usuario: "Sin responder",
+    extra: preguntaObj.extra || ""
+  });
+  if (document.getElementById('sonido-incorrecto')) {
+    let audio = document.getElementById('sonido-incorrecto');
+    audio.currentTime = 0;
+    audio.volume = 1;
+    audio.play();
+  }
+  document.getElementById('siguiente').style.display = 'inline-block';
 }
 window.addEventListener('DOMContentLoaded', () => {
   const musica = document.getElementById('musica-fondo');

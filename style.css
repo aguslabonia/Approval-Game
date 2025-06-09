@@ -296,3 +296,30 @@ select {
   font-style: italic;
   background: #e0eaff;
 }
+#timer-container {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+#timer-numero {
+  color: black;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+#timer-barra {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+  margin-top: 0.3rem;
+  overflow: hidden;
+}
+#timer-barra-progreso {
+  height: 100%;
+  width: 100%;
+  background: #4CAF50;
+  transition: width 0.2s linear;
+}
+#timer-numero.rojo {
+  color: #f44336;
+}
