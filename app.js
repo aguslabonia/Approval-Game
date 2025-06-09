@@ -1570,6 +1570,118 @@ let preguntas = {
     "extra": "La IA permite a las máquinas aprender y realizar tareas que requieren inteligencia humana."
   }
 ],
+"Sólo para expertos": [
+  {
+    "pregunta": "¿Quién propuso la ecuación fundamental de la mecánica cuántica conocida como 'ecuación de onda'?",
+    "opciones": [
+      "Werner Heisenberg",
+      "Erwin Schrödinger",
+      "Niels Bohr",
+      "Paul Dirac"
+    ],
+    "respuesta": "Erwin Schrödinger",
+    "extra": "La ecuación de Schrödinger describe cómo evoluciona el estado cuántico de un sistema físico."
+  },
+  {
+    "pregunta": "¿Qué principio establece que no se pueden conocer simultáneamente y con precisión la posición y el momento de una partícula?",
+    "opciones": [
+      "Principio de exclusión de Pauli",
+      "Principio de incertidumbre de Heisenberg",
+      "Principio de superposición",
+      "Principio de correspondencia"
+    ],
+    "respuesta": "Principio de incertidumbre de Heisenberg",
+    "extra": "Este principio es fundamental en la mecánica cuántica y limita la precisión de las mediciones."
+  },
+  {
+    "pregunta": "¿Qué experimento demostró la dualidad onda-partícula de la luz?",
+    "opciones": [
+      "Experimento de la doble rendija",
+      "Experimento de Michelson-Morley",
+      "Experimento de Cavendish",
+      "Experimento de Rutherford"
+    ],
+    "respuesta": "Experimento de la doble rendija",
+    "extra": "El experimento de Young mostró que la luz puede comportarse como onda y como partícula."
+  },
+  {
+    "pregunta": "¿Qué partícula es el mediador de la fuerza electromagnética según el modelo estándar?",
+    "opciones": [
+      "Gluón",
+      "Fotón",
+      "Bosón W",
+      "Neutrino"
+    ],
+    "respuesta": "Fotón",
+    "extra": "El fotón es la partícula portadora de la interacción electromagnética."
+  },
+  {
+    "pregunta": "¿Cómo se llama el fenómeno cuántico donde dos partículas pueden estar correlacionadas sin importar la distancia?",
+    "opciones": [
+      "Entrelazamiento cuántico",
+      "Túnel cuántico",
+      "Colapso de la función de onda",
+      "Efecto fotoeléctrico"
+    ],
+    "respuesta": "Entrelazamiento cuántico",
+    "extra": "El entrelazamiento cuántico fue llamado por Einstein 'acción fantasmal a distancia'."
+  },
+  {
+    "pregunta": "¿Qué es el 'spin' en física cuántica?",
+    "opciones": [
+      "La masa de una partícula",
+      "La carga eléctrica de una partícula",
+      "El momento angular intrínseco de una partícula",
+      "La energía de una partícula"
+    ],
+    "respuesta": "El momento angular intrínseco de una partícula",
+    "extra": "El spin es una propiedad cuántica fundamental, no tiene análogo clásico exacto."
+  },
+  {
+    "pregunta": "¿Qué partícula predice el modelo estándar y fue confirmada en 2012 en el CERN?",
+    "opciones": [
+      "Bosón de Higgs",
+      "Quark top",
+      "Neutrino tau",
+      "Gravitón"
+    ],
+    "respuesta": "Bosón de Higgs",
+    "extra": "El bosón de Higgs es responsable de dar masa a otras partículas elementales."
+  },
+  {
+    "pregunta": "¿Qué interpretación de la mecánica cuántica sostiene que todas las posibilidades ocurren en universos paralelos?",
+    "opciones": [
+      "Interpretación de Copenhague",
+      "Interpretación de los muchos mundos",
+      "Interpretación de Bohm",
+      "Interpretación estadística"
+    ],
+    "respuesta": "Interpretación de los muchos mundos",
+    "extra": "La interpretación de los muchos mundos fue propuesta por Hugh Everett en 1957."
+  },
+  {
+    "pregunta": "¿Qué fenómeno permite que una partícula atraviese una barrera de energía que clásicamente no podría superar?",
+    "opciones": [
+      "Efecto túnel cuántico",
+      "Efecto Zeeman",
+      "Efecto Doppler",
+      "Efecto Hall"
+    ],
+    "respuesta": "Efecto túnel cuántico",
+    "extra": "El efecto túnel es fundamental en dispositivos como el microscopio de efecto túnel y la fusión nuclear."
+  },
+  {
+    "pregunta": "¿Cuál es el nombre del famoso experimento mental que ilustra la superposición cuántica con un gato?",
+    "opciones": [
+      "El gato de Schrödinger",
+      "El demonio de Maxwell",
+      "El experimento de Feynman",
+      "El experimento de Stern-Gerlach"
+    ],
+    "respuesta": "El gato de Schrödinger",
+    "extra": "El gato de Schrödinger está vivo y muerto a la vez hasta que se observa el sistema."
+  }
+]
 };
 cargarTemas();
 let temaActual = '';
@@ -1599,6 +1711,11 @@ document.getElementById('empezar').onclick = () => {
     return;
   }
 document.getElementById('empezar').onclick = () => {
+  nombreUsuario = document.getElementById('nombre-usuario').value.trim();
+  if (!nombreUsuario) {
+    alert("Por favor, ingresa tu nombre para jugar.");
+    return;
+  }
   temaActual = document.getElementById('tema').value;
   preguntasTema = [...preguntas[temaActual]];
   indicePregunta = 0;
@@ -1626,11 +1743,12 @@ document.getElementById('siguiente').onclick = () => {
 };
 
 document.getElementById('reiniciar').onclick = () => {
+  clearInterval(timerInterval);
   document.getElementById('tema-selector').style.display = 'block';
   document.getElementById('resultado').style.display = 'none';
   document.getElementById('juego').style.display = 'none';
   actualizarBarraProgreso(0);
-  clearInterval(timerInterval);
+
 };
 
 function mostrarPregunta() {
