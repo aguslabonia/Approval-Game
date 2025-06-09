@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Approval Games Powered by AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="titulo-juego">Approval Games Powered by AI</h1>
+    <div class="linea-gradiente"></div>
+    <div id="tema-selector" class="card card-inicio">
+      <h2>Elige un tema</h2>
+      <label for="nombre-usuario">Ingresa tu nombre:</label>
+      <input type="text" id="nombre-usuario" placeholder="Tu nombre" maxlength="20" required>
+      <select id="tema"></select>
+      <button id="empezar">Empezar</button>
+    </div>
+    <div id="juego" class="card" style="display:none;">
+      <div id="timer-container">
+  <span id="timer-numero">15</span> segundos
+  <div id="timer-barra">
+    <div id="timer-barra-progreso"></div>
+  </div>
+</div>
+      <div id="pregunta-area"></div>
+      <button id="siguiente" style="display:none;">Siguiente</button>
+    </div>
+    <div id="resultado" class="card" style="display:none;">
+      <h2>¡Juego terminado!</h2>
+      <p id="puntaje"></p>
+      <div id="resumen"></div>
+      <button id="reiniciar">Jugar de nuevo</button>
+    </div>
+  </div>
+  <!-- Audios (opcional) -->
+  <audio id="musica-fondo" src="musica-fondo.wav" loop></audio>
+  <audio id="sonido-correcto" src="correcto.wav"></audio>
+  <audio id="sonido-incorrecto" src="incorrecto.wav"></audio>
+  <script src="app.js"></script>
+</body>
+</html>

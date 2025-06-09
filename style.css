@@ -1,0 +1,325 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #a7bfff 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 480px;
+  margin: 60px auto;
+  background: rgba(255,255,255,0.97);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  padding: 40px 30px 30px 30px;
+  position: relative;
+}
+
+.titulo-juego {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.linea-gradiente {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  margin-bottom: 2rem;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 24px;
+  border-radius: 12px;
+  background: #f9fafc;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+}
+
+.card-inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px 24px 24px;
+  box-shadow: 0 2px 12px rgba(79,140,255,0.10);
+}
+
+.card-inicio h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: #222;
+  font-weight: 600;
+}
+
+label {
+  align-self: flex-start;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+#nombre-usuario, #tema {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #c3d0e8;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  background: #f4f6fb;
+  transition: border 0.2s;
+}
+
+#nombre-usuario:focus, #tema:focus {
+  border: 1.5px solid #2575fc;
+  outline: none;
+}
+
+#empezar {
+  width: 100%;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(79,140,255,0.08);
+  transition: background 0.2s, transform 0.1s;
+}
+
+#empezar:hover {
+  background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+  transform: scale(1.03);
+}
+
+#pregunta-area h2 {
+  color: #2d3a4b;
+  font-size: 1.5rem;
+  text-align: center;
+}
+button, .opcion {
+  display: block;
+  width: 100%;
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 12px 0;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(79,140,255,0.08);
+}
+button:hover, .opcion:hover {
+  background: #2575fc;
+  transform: scale(1.03);
+}
+.opcion.correcta {
+  background: #43e97b;
+  color: #1b3c1b;
+}
+.opcion.incorrecta {
+  background: #ff6a6a;
+  color: #fff;
+}
+#puntaje {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #2575fc;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #c3d0e8;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+#resumen {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+#resumen table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+}
+#resumen th, #resumen td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: left;
+}
+#resumen th {
+  background: #e0e0e0;
+}
+.resumen-titulo {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #2575fc;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.resumen-card {
+  background: #f4f6fb;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(79,140,255,0.08);
+  padding: 18px 20px 14px 20px;
+  margin-bottom: 18px;
+  transition: box-shadow 0.2s;
+}
+
+.resumen-card:hover {
+  box-shadow: 0 4px 16px rgba(79,140,255,0.16);
+}
+
+.resumen-pregunta {
+  font-size: 1.08rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.resumen-respuesta, .resumen-correcta {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.res-label {
+  font-weight: 500;
+  color: #2575fc;
+  margin-right: 6px;
+}
+
+.res-user.correcta {
+  color: #43e97b;
+  font-weight: bold;
+}
+
+.res-user.incorrecta {
+  color: #ff6a6a;
+  font-weight: bold;
+}
+
+.resumen-correcta span:last-child {
+  color: #2575fc;
+  font-weight: bold;
+}
+
+.resumen-extra {
+  background: #e0eaff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.98rem;
+  color: #2d3a4b;
+  margin-top: 8px;
+}
+
+.ranking-titulo {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #6a11cb;
+  margin-bottom: 1.2rem;
+  margin-top: 2.2rem;
+}
+
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  background: #f4f6fb;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(79,140,255,0.07);
+  padding: 10px 16px;
+  font-size: 1.05rem;
+  transition: box-shadow 0.2s;
+}
+
+.ranking-item:hover {
+  box-shadow: 0 2px 12px rgba(79,140,255,0.13);
+}
+
+.ranking-primero {
+  background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+  color: #222;
+  font-weight: bold;
+  border: 2px solid #ffd700;
+}
+
+.ranking-puesto {
+  width: 32px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2575fc;
+  text-align: center;
+  margin-right: 12px;
+}
+
+.ranking-nombre {
+  flex: 1;
+  font-weight: 500;
+  color: #2d3a4b;
+}
+
+.ranking-puntaje {
+  width: 60px;
+  text-align: center;
+  font-weight: bold;
+  color: #43e97b;
+}
+
+.ranking-fecha {
+  width: 120px;
+  text-align: right;
+  font-size: 0.92rem;
+  color: #888;
+  margin-left: 10px;
+}
+
+.ranking-empty {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  background: #e0eaff;
+}
+#timer-container {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+#timer-numero {
+  color: black;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+#timer-barra {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+  margin-top: 0.3rem;
+  overflow: hidden;
+}
+#timer-barra-progreso {
+  height: 100%;
+  width: 100%;
+  background: #4CAF50;
+  transition: width 0.2s linear;
+}
+#timer-numero.rojo {
+  color: #f44336;
+}
