@@ -1233,6 +1233,119 @@ let preguntas = {
     "extra": "La Novena Sinfonía de Beethoven es famosa por su 'Oda a la Alegría'."
   }
 ],
+"Vinos": [
+  {
+    "pregunta": "¿Cuál es la cepa de uva tinta más cultivada en Argentina?",
+    "opciones": [
+      "Cabernet Sauvignon",
+      "Syrah",
+      "Malbec",
+      "Merlot"
+    ],
+    "respuesta": "Malbec",
+    "extra": "El Malbec es la variedad emblemática de Argentina, especialmente en Mendoza."
+  },
+  {
+    "pregunta": "¿En qué país se encuentra la región vinícola de La Rioja?",
+    "opciones": [
+      "España",
+      "Argentina",
+      "Chile",
+      "Italia"
+    ],
+    "respuesta": "España",
+    "extra": "La Rioja es una de las regiones vinícolas más famosas de España."
+  },
+  {
+    "pregunta": "¿Qué uva es la base principal del vino Chianti?",
+    "opciones": [
+      "Nebbiolo",
+      "Sangiovese",
+      "Tempranillo",
+      "Pinot Noir"
+    ],
+    "respuesta": "Sangiovese",
+    "extra": "El Chianti, típico de la Toscana, se elabora principalmente con Sangiovese."
+  },
+  {
+    "pregunta": "¿Cuál es la región vinícola más famosa de Francia para vinos espumosos?",
+    "opciones": [
+      "Champagne",
+      "Borgoña",
+      "Burdeos",
+      "Alsacia"
+    ],
+    "respuesta": "Champagne",
+    "extra": "Solo los vinos espumosos de la región de Champagne pueden llamarse así legalmente."
+  },
+  {
+    "pregunta": "¿Qué país es el mayor productor de vino del mundo?",
+    "opciones": [
+      "Francia",
+      "Italia",
+      "España",
+      "Estados Unidos"
+    ],
+    "respuesta": "Italia",
+    "extra": "Italia suele alternar el primer puesto con Francia en producción mundial de vino."
+  },
+  {
+    "pregunta": "¿Qué variedad de uva se utiliza principalmente para el vino blanco Riesling?",
+    "opciones": [
+      "Chardonnay",
+      "Riesling",
+      "Sauvignon Blanc",
+      "Viognier"
+    ],
+    "respuesta": "Riesling",
+    "extra": "El Riesling es una uva blanca originaria de Alemania, famosa por sus vinos aromáticos."
+  },
+  {
+    "pregunta": "¿En qué provincia argentina se encuentra la mayor superficie de viñedos?",
+    "opciones": [
+      "San Juan",
+      "Salta",
+      "Mendoza",
+      "La Rioja"
+    ],
+    "respuesta": "Mendoza",
+    "extra": "Mendoza concentra más del 70% de la producción vitivinícola argentina."
+  },
+  {
+    "pregunta": "¿Qué significa la palabra 'terroir' en el mundo del vino?",
+    "opciones": [
+      "Tipo de barrica",
+      "Conjunto de factores naturales que influyen en el viñedo",
+      "Método de fermentación",
+      "Estilo de botella"
+    ],
+    "respuesta": "Conjunto de factores naturales que influyen en el viñedo",
+    "extra": "El terroir incluye clima, suelo, altitud y prácticas humanas."
+  },
+  {
+    "pregunta": "¿Cuál de estas uvas es típica de Burdeos para vinos tintos?",
+    "opciones": [
+      "Pinot Noir",
+      "Cabernet Sauvignon",
+      "Syrah",
+      "Garnacha"
+    ],
+    "respuesta": "Cabernet Sauvignon",
+    "extra": "Cabernet Sauvignon es una de las principales uvas de los tintos de Burdeos."
+  },
+  {
+    "pregunta": "¿Qué civilización antigua es famosa por expandir la viticultura en el Mediterráneo?",
+    "opciones": [
+      "Romanos",
+      "Egipcios",
+      "Fenicios",
+      "Griegos"
+    ],
+    "respuesta": "Fenicios",
+    "extra": "Los fenicios llevaron la vid y el vino desde el Medio Oriente a muchas costas del Mediterráneo."
+  }
+],
+
 "Tecnología": [
   {
     "pregunta": "¿Qué significa 'www' en una dirección web?",
