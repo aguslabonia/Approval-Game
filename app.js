@@ -1233,6 +1233,118 @@ let preguntas = {
     "extra": "La Novena Sinfonía de Beethoven es famosa por su 'Oda a la Alegría'."
   }
 ],
+"Geografía":[
+  {
+    "pregunta": "¿Cuál es el río más largo del mundo?",
+    "opciones": [
+      "Nilo",
+      "Amazonas",
+      "Yangtsé",
+      "Misisipi"
+    ],
+    "respuesta": "Amazonas",
+    "extra": "El Amazonas es considerado el río más largo y caudaloso del mundo, con más de 7.000 km."
+  },
+  {
+    "pregunta": "¿En qué continente se encuentra el desierto del Sahara?",
+    "opciones": [
+      "Asia",
+      "África",
+      "Oceanía",
+      "América"
+    ],
+    "respuesta": "África",
+    "extra": "El Sahara es el desierto cálido más grande del mundo y está en el norte de África."
+  },
+  {
+    "pregunta": "¿Cuál es la capital de Australia?",
+    "opciones": [
+      "Sídney",
+      "Melbourne",
+      "Canberra",
+      "Brisbane"
+    ],
+    "respuesta": "Canberra",
+    "extra": "Canberra fue elegida capital para resolver la rivalidad entre Sídney y Melbourne."
+  },
+  {
+    "pregunta": "¿Qué país tiene la mayor cantidad de islas en el mundo?",
+    "opciones": [
+      "Filipinas",
+      "Indonesia",
+      "Suecia",
+      "Canadá"
+    ],
+    "respuesta": "Suecia",
+    "extra": "Suecia tiene más de 260.000 islas, la mayor cantidad de cualquier país."
+  },
+  {
+    "pregunta": "¿Cuál es el país más pequeño del mundo?",
+    "opciones": [
+      "Mónaco",
+      "San Marino",
+      "Nauru",
+      "Ciudad del Vaticano"
+    ],
+    "respuesta": "Ciudad del Vaticano",
+    "extra": "La Ciudad del Vaticano tiene solo 0,44 km² y es un enclave en Roma, Italia."
+  },
+  {
+    "pregunta": "¿En qué océano se encuentra Madagascar?",
+    "opciones": [
+      "Atlántico",
+      "Índico",
+      "Pacífico",
+      "Ártico"
+    ],
+    "respuesta": "Índico",
+    "extra": "Madagascar es la isla más grande de África y está en el océano Índico."
+  },
+  {
+    "pregunta": "¿Cuál es la montaña más alta de América?",
+    "opciones": [
+      "Monte McKinley",
+      "Aconcagua",
+      "Pico Bolívar",
+      "Chimborazo"
+    ],
+    "respuesta": "Aconcagua",
+    "extra": "El Aconcagua, en Argentina, mide 6.960 metros sobre el nivel del mar."
+  },
+  {
+    "pregunta": "¿Qué país tiene frontera con más países?",
+    "opciones": [
+      "China",
+      "Rusia",
+      "Brasil",
+      "Alemania"
+    ],
+    "respuesta": "China",
+    "extra": "China limita con 14 países diferentes, más que cualquier otro país."
+  },
+  {
+    "pregunta": "¿Cuál es el lago más grande de agua dulce del mundo?",
+    "opciones": [
+      "Lago Superior",
+      "Lago Victoria",
+      "Lago Baikal",
+      "Lago Titicaca"
+    ],
+    "respuesta": "Lago Superior",
+    "extra": "El Lago Superior, en América del Norte, es el lago de agua dulce más grande por superficie."
+  },
+  {
+    "pregunta": "¿En qué país se encuentra la cordillera del Himalaya?",
+    "opciones": [
+      "Nepal",
+      "India",
+      "China",
+      "Todos los anteriores"
+    ],
+    "respuesta": "Todos los anteriores",
+    "extra": "El Himalaya atraviesa Nepal, India, China, Bután y Pakistán."
+  }
+],
 "Vinos": [
   {
     "pregunta": "¿Cuál es la cepa de uva tinta más cultivada en Argentina?",
